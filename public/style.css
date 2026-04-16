@@ -1,0 +1,11 @@
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;color:#222}
+header{background:#0b6;padding:24px;color:#013}
+header h1{margin:0}
+main{padding:24px}
+.clients ul{list-style:none;padding:0}
+.client-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid #eee}
+.btn{display:inline-block;padding:8px 12px;background:#047;color:#fff;text-decoration:none;border-radius:4px}
+.admin-form{max-width:480px}
+.admin-form label{display:block;margin-bottom:12px}
+footer{padding:12px;text-align:center;color:#666;border-top:1px solid #eee}

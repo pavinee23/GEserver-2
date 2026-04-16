@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>บริการของ Han — เกตเวย์ลูกค้า</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Han - ระบบสำหรับลูกค้า</h1>
+      <p>ยินดีต้อนรับ — นี่คือหน้าโฆษณาและทางเข้าไปยังระบบของลูกค้า</p>
+      <p><a href="/admin">แอดมิน: เพิ่มลูกค้า</a></p>
+    </header>
+
+    <main>
+      <section class="clients">
+        <h2>ลูกค้าที่ใช้บริการ</h2>
+        <% if (clients && clients.length) { %>
+          <ul>
+          <% clients.forEach(function(c){ %>
+            <li class="client-item">
+              <div class="meta">
+                <h3><a href="/client/<%= c.id %>"><%= c.name %></a></h3>
+                <p><%= c.description %></p>
+              </div>
+              <div class="actions">
+                <a class="btn" href="/client/<%= c.id %>">เข้าสู่ระบบ</a>
+              </div>
+            </li>
+          <% }) %>
+          </ul>
+        <% } else { %>
+          <p>ยังไม่มีข้อมูลลูกค้า</p>
+        <% } %>
+      </section>
+    </main>
+
+    <footer>
+      <p>© Han — ติดต่อ: your-email@example.com</p>
+    </footer>
+  </body>
+</html>
