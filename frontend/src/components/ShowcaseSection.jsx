@@ -40,7 +40,12 @@ export default function ShowcaseSection({
                       <span>{client.contact_phone}</span>
                     </div>
                     <div className="showcase-actions">
-                      <a className="btn agency-btn-primary" href={client.system_url} target="_blank" rel="noopener noreferrer">
+                      <a
+                        className="btn agency-btn-primary"
+                        href={client.system_url}
+                        target={client.system_url?.startsWith("http") ? "_blank" : "_self"}
+                        rel={client.system_url?.startsWith("http") ? "noopener noreferrer" : undefined}
+                      >
                         {ui.viewPortal}
                       </a>
                     </div>

@@ -46,7 +46,7 @@ export const fallbackClients = [
     status: "online",
     contact_email: "ops@rung-ruang.example.com",
     contact_phone: "02-111-2233",
-    system_url: "https://m.factory.com",
+    system_url: "/m-factory",
   },
   {
     id: 2,
