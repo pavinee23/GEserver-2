@@ -1,7 +1,17 @@
 {
   "rootDirectory": "frontend",
-  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "buildCommand": "npx prisma generate && npm run build",
   "installCommand": "npm install",
   "outputDirectory": ".next",
-  "framework": "nextjs"
+  "env": {
+    "BACKEND_URL": "@backend_url"
+  },
+  "build": {
+    "env": {
+      "BACKEND_URL": "@backend_url",
+      "NEXT_PUBLIC_BACKEND_URL": "@next_public_backend_url"
+    }
+  }
 }
+

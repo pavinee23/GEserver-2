@@ -1,4 +1,4 @@
-import ChatClient from './ChatClient'
+import ChatClient from '@/components/ChatClient'
 
 export const metadata = {
   title: 'AI Chat',

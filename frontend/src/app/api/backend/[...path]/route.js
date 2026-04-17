@@ -4,7 +4,8 @@ const backendBaseUrl =
 export const dynamic = "force-dynamic";
 
 export async function GET(request, { params }) {
-  const pathParts = Array.isArray(params?.path) ? params.path : [];
+  const { path } = await params;
+  const pathParts = Array.isArray(path) ? path : [];
   const backendUrl = new URL(`/api/${pathParts.join("/")}`, backendBaseUrl);
 
   request.nextUrl.searchParams.forEach((value, key) => {

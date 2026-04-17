@@ -4,7 +4,7 @@ export default function ContactSection({ ui, profile }) {
   return (
     <section className="agency-section agency-section-dark" id="contact">
       <div className="container-xxl agency-shell">
-        <div className="contact-banner">
+        <div className="contact-banner" data-reveal>
           <div className="contact-banner-copy">
             <span className="section-kicker section-kicker-light">{ui.contactKicker}</span>
             <h2>{ui.contactTitle}</h2>

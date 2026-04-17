@@ -10,15 +10,16 @@ import {
   getJson,
 } from "@/lib/data";
 import { translations } from "@/lib/translations";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import ServicesSection from "./ServicesSection";
-import ShowcaseSection from "./ShowcaseSection";
-import JourneySection from "./JourneySection";
-import ContactSection from "./ContactSection";
-import Footer from "./Footer";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Sidebar from "@/components/Sidebar";
+import ServicesSection from "@/components/ServicesSection";
+import ShowcaseSection from "@/components/ShowcaseSection";
+import JourneySection from "@/components/JourneySection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
-export default function HomeClient() {
+export default function Page() {
   const [profile, setProfile] = useState(fallbackProfile);
   const [services, setServices] = useState(fallbackServices);
   const [clients, setClients] = useState(fallbackClients);
@@ -37,6 +38,38 @@ export default function HomeClient() {
     window.localStorage.setItem(languageStorageKey, currentLanguage);
     document.documentElement.lang = currentLanguage;
   }, [currentLanguage]);
+
+  // Scroll-reveal: mark body ready, then observe [data-reveal] elements
+  useEffect(() => {
+    document.body.classList.add("ge-ready");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px 0px 0px" }
+    );
+
+    const elements = document.querySelectorAll("[data-reveal]");
+    elements.forEach((el) => observer.observe(el));
+
+    // Fallback: if observer doesn't fire within 1.5s, reveal all remaining elements
+    const fallback = setTimeout(() => {
+      document.querySelectorAll("[data-reveal]:not(.is-revealed)").forEach((el) => {
+        el.classList.add("is-revealed");
+      });
+    }, 1500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
+  }, [loading]); // re-observe after async data loads
 
   useEffect(() => {
     let active = true;
@@ -60,7 +93,9 @@ export default function HomeClient() {
     }
 
     loadData();
-    return () => { active = false; };
+    return () => {
+      active = false;
+    };
   }, []);
 
   const ui = translations[currentLanguage] || translations.th;
@@ -94,40 +129,46 @@ export default function HomeClient() {
   }));
 
   return (
-    <main className="agency-page">
-      <div className="agency-ambient agency-ambient-a" aria-hidden="true" />
-      <div className="agency-ambient agency-ambient-b" aria-hidden="true" />
-      <div className="agency-ambient agency-ambient-c" aria-hidden="true" />
+    <div className="agency-app-layout">
+      <Sidebar ui={ui} profile={profile} />
 
-      <Navbar
-        ui={ui}
-        currentLanguage={currentLanguage}
-        setCurrentLanguage={setCurrentLanguage}
-        profile={profile}
-      />
-      <Hero
-        ui={ui}
-        profile={profile}
-        services={localizedServices}
-        clients={clients}
-        onlineCount={onlineCount}
-        maintenanceCount={maintenanceCount}
-        comingSoonCount={comingSoonCount}
-        loading={loading}
-      />
-      <ServicesSection ui={ui} services={localizedServices} />
-      <ShowcaseSection
-        ui={ui}
-        filteredClients={filteredClients}
-        query={query}
-        setQuery={setQuery}
-        activeFilter={activeFilter}
-        setActiveFilter={setActiveFilter}
-        filterOptions={translatedFilterOptions}
-      />
-      <JourneySection ui={ui} />
-      <ContactSection ui={ui} profile={profile} />
-      <Footer ui={ui} profile={profile} />
-    </main>
+      <main className="agency-main-content">
+        <div className="agency-page">
+          <div className="agency-ambient agency-ambient-a" aria-hidden="true" />
+          <div className="agency-ambient agency-ambient-b" aria-hidden="true" />
+          <div className="agency-ambient agency-ambient-c" aria-hidden="true" />
+
+          <Navbar
+            ui={ui}
+            currentLanguage={currentLanguage}
+            setCurrentLanguage={setCurrentLanguage}
+            query={query}
+            setQuery={setQuery}
+          />
+          <Hero
+            ui={ui}
+            profile={profile}
+            services={localizedServices}
+            clients={clients}
+            onlineCount={onlineCount}
+            maintenanceCount={maintenanceCount}
+            comingSoonCount={comingSoonCount}
+            loading={loading}
+            query={query}
+            setQuery={setQuery}
+            activeFilter={activeFilter}
+            setActiveFilter={setActiveFilter}
+          />
+          <ShowcaseSection
+            ui={ui}
+            filteredClients={filteredClients}
+          />
+          <ServicesSection ui={ui} services={localizedServices} />
+          <JourneySection ui={ui} />
+          <ContactSection ui={ui} profile={profile} />
+          <Footer ui={ui} profile={profile} />
+        </div>
+      </main>
+    </div>
   );
 }

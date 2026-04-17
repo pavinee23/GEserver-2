@@ -1,55 +1,28 @@
-import { statusClassName, clientPortalUrl, clientLoginUrl } from "@/lib/data";
+import { statusClassName } from "@/lib/data";
 
 export default function ShowcaseSection({
   ui,
   filteredClients,
-  query,
-  setQuery,
-  activeFilter,
-  setActiveFilter,
-  filterOptions,
 }) {
   return (
     <section className="agency-section agency-section-light" id="showcase">
       <div className="container-xxl agency-shell">
         <div className="agency-section-shell agency-section-shell-glow">
-          <div className="section-intro text-center">
+          <div className="section-intro text-center" data-reveal>
             <h2 className="section-title">{ui.showcaseTitle}</h2>
             <p className="section-subtitle">{ui.showcaseSubtitle}</p>
-          </div>
-
-          <div className="showcase-toolbar">
-            <div className="showcase-search">
-              <label htmlFor="client-search">{ui.searchLabel}</label>
-              <input
-                id="client-search"
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder={ui.searchPlaceholder}
-              />
-            </div>
-            <div className="showcase-filters">
-              {filterOptions.map((option) => (
-                <button
-                  key={option.key}
-                  type="button"
-                  className={`filter-pill ${activeFilter === option.key ? "is-active" : ""}`}
-                  onClick={() => setActiveFilter(option.key)}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
           </div>
 
           <div className="row g-4">
             {filteredClients.map((client, index) => (
               <div
                 key={client.slug}
-                className={index === 0 ? "col-12 col-lg-6" : "col-12 col-md-6 col-lg-3"}
+                className="col-12 col-md-6 col-lg-4"
               >
-                <article className={`showcase-card ${index === 0 ? "showcase-card-featured" : ""}`}>
+                <article
+                  data-reveal
+                  data-delay={Math.min(index + 1, 6)}
+                  className="showcase-card">
                   <div className="showcase-visual">
                     <div className="showcase-glow" />
                     <div className="showcase-visual-content">
@@ -67,11 +40,8 @@ export default function ShowcaseSection({
                       <span>{client.contact_phone}</span>
                     </div>
                     <div className="showcase-actions">
-                      <a className="btn agency-btn-primary" href={clientPortalUrl(client.slug)}>
+                      <a className="btn agency-btn-primary" href={client.system_url} target="_blank" rel="noopener noreferrer">
                         {ui.viewPortal}
-                      </a>
-                      <a className="btn agency-btn-soft" href={clientLoginUrl(client.slug)}>
-                        {ui.enterSystem}
                       </a>
                     </div>
                   </div>

@@ -1,23 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GOEUN SERVER HUB">
   <defs>
-    <linearGradient id="panel" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1a4a42"/>
-      <stop offset="1" stop-color="#0d211f"/>
+    <linearGradient id="fv-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#1e40af"/>
     </linearGradient>
-    <linearGradient id="orbit" x1="14" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f4dcc0"/>
-      <stop offset="0.52" stop-color="#c98857"/>
-      <stop offset="1" stop-color="#8b5a35"/>
-    </linearGradient>
-    <linearGradient id="portal" x1="24" y1="18" x2="39" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff8ef"/>
-      <stop offset="1" stop-color="#e8d2bc"/>
+    <linearGradient id="fv-ge" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#06b6d4"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="url(#panel)"/>
-  <rect x="4.5" y="4.5" width="55" height="55" rx="15" fill="none" opacity="0.48" stroke="#f3e0ca"/>
-  <path d="M47 31.5H37" fill="none" stroke="url(#orbit)" stroke-linecap="round" stroke-width="5.5"/>
-  <path d="M44.5 19.5C40.5 14.5 34 12 27.5 12C16.5 12 9.5 20 9.5 31C9.5 42.5 17.5 50.5 29 50.5C35.5 50.5 41 48.5 45 44.5" fill="none" stroke="url(#orbit)" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.5"/>
-  <path d="M30.5 18.5C37 18.5 42 23.5 42 30V46.5H34.5V31C34.5 28.5 32.5 26.5 30 26.5C27.5 26.5 25.5 28.5 25.5 31V46.5H18V30C18 23.5 23.5 18.5 30 18.5H30.5Z" fill="url(#portal)"/>
-  <circle cx="44" cy="19.5" r="2.2" fill="#f4dcc0"/>
+  <rect width="64" height="64" rx="18" fill="url(#fv-bg)"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.35"/>
+  <!-- G arc -->
+  <path d="M40 20 A18 18 0 1 0 40 44" fill="none" stroke="url(#fv-ge)" stroke-linecap="round" stroke-width="5.5"/>
+  <!-- G crossbar -->
+  <path d="M40 32 H29" fill="none" stroke="url(#fv-ge)" stroke-linecap="round" stroke-width="5.5"/>
+  <!-- E spine -->
+  <path d="M42 20 V44" fill="none" stroke="url(#fv-ge)" stroke-linecap="round" stroke-width="5"/>
+  <!-- E bars -->
+  <path d="M42 20 H54" fill="none" stroke="url(#fv-ge)" stroke-linecap="round" stroke-width="5"/>
+  <path d="M42 32 H52" fill="none" stroke="url(#fv-ge)" stroke-linecap="round" stroke-width="5"/>
+  <path d="M42 44 H54" fill="none" stroke="url(#fv-ge)" stroke-linecap="round" stroke-width="5"/>
+  <!-- Accent dot -->
+  <circle cx="54" cy="20" r="2.5" fill="#06b6d4"/>
 </svg>

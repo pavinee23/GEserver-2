@@ -1,46 +1,55 @@
-import { languageOptions } from "@/lib/data";
+"use client";
 
-export default function Navbar({ ui, currentLanguage, setCurrentLanguage, profile }) {
+import { languageOptions } from "@/lib/data";
+import Link from "next/link";
+
+export default function Navbar({ ui, currentLanguage, setCurrentLanguage, query, setQuery }) {
   return (
-    <nav className="agency-navbar">
-      <div className="container-xxl agency-shell">
-        <div className="agency-navbar-shell">
-          <a className="agency-brand" href="#top">
-            <img
-              src="/logo-mark.svg"
-              alt="GOEUN SERVER HUB"
-              width="64"
-              height="64"
-              className="agency-brand-logo"
-            />
-            <span className="agency-brand-copy">
-              <span className="agency-brand-kicker">{ui.brandKicker}</span>
-              <strong>{profile.brand_name}</strong>
-              <span>{ui.brandSubtitle}</span>
-            </span>
-          </a>
-          <div className="agency-nav-tools">
-            <div className="agency-language-switcher" aria-label="Language switcher">
-              {languageOptions.map((option) => (
-                <button
-                  key={option.key}
-                  type="button"
-                  className={`agency-language-button ${currentLanguage === option.key ? "is-active" : ""}`}
-                  onClick={() => setCurrentLanguage(option.key)}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-            <div className="agency-nav-links">
-              <a href="#services">{ui.navServices}</a>
-              <a href="#showcase">{ui.navPortals}</a>
-              <a href="#journey">{ui.navJourney}</a>
-              <a href="#contact">{ui.navContact}</a>
-            </div>
-          </div>
-        </div>
+    <header className="agency-topbar">
+      <div className="agency-topbar-search">
+        <svg
+          className="agency-topbar-search-icon"
+          viewBox="0 0 24 24"
+          width="16"
+          height="16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={ui.searchPlaceholder || "ค้นหาระบบ บริการ หรือพอร์ทัล..."}
+          aria-label="ค้นหา"
+        />
       </div>
-    </nav>
+
+      <div className="agency-topbar-actions">
+        <div className="agency-language-switcher" aria-label="Language switcher">
+          {languageOptions.map((option) => (
+            <button
+              key={option.key}
+              type="button"
+              className={`agency-language-button ${currentLanguage === option.key ? "is-active" : ""}`}
+              onClick={() => setCurrentLanguage(option.key)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+        <a href="#contact" className="agency-topbar-link">
+          {ui.navContact}
+        </a>
+        <Link href="/login" className="btn agency-btn-primary agency-topbar-cta">
+          {ui.navLogin || "เข้าสู่ระบบ"}
+        </Link>
+      </div>
+    </header>
   );
 }

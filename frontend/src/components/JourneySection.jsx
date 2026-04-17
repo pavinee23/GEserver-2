@@ -3,7 +3,7 @@ export default function JourneySection({ ui }) {
     <section className="agency-section agency-section-plain" id="journey">
       <div className="container-xxl agency-shell">
         <div className="agency-section-shell agency-section-shell-plain">
-          <div className="section-intro text-center">
+          <div className="section-intro text-center" data-reveal>
             <span className="section-kicker">{ui.journeyKicker}</span>
             <h2 className="section-title">{ui.journeyTitle}</h2>
             <p className="section-subtitle">{ui.journeySubtitle}</p>
@@ -13,6 +13,8 @@ export default function JourneySection({ ui }) {
             {ui.journeySteps.map((step, index) => (
               <div
                 key={step.phase}
+                data-reveal
+                data-delay={Math.min(index + 1, 4)}
                 className={`journey-item ${index % 2 === 0 ? "journey-item-left" : "journey-item-right"}`}
               >
                 <div className="journey-node">{step.phase}</div>
