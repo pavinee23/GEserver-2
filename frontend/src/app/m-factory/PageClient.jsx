@@ -202,6 +202,80 @@ const CONTENT = {
       { name: "คุณรัตนพล ชาญกิจ", role: "เช่าโรงงาน", text: "โรงงานพร้อมใช้งาน ไฟฟ้า 3 เฟส ระบบน้ำครบ ขยายธุรกิจสะดวกมาก ขอบคุณทีมงานครับ", rating: 5, avatar: "👨‍🔬", date: "เม.ย. 68" },
     ],
   },
+  zh: {
+    navServices: "服务",
+    navGallery: "项目图片",
+    navResort: "度假村图片",
+    navContact: "联系我们",
+    brandSub: "仓库 · 工厂 · 度假村",
+    heroBadge: "Premium Industrial & Resort",
+    heroTitle: "M-Factory",
+    heroLine1: "出售/出租仓库及预制工厂",
+    heroLine2: "住宿服务 · 私人度假村",
+    heroCta: "联系我们",
+    heroLearnMore: "了解更多",
+    servicesBadge: "我们的服务",
+    servicesHeading: "满足您的所有空间需求",
+    galleryBadge: "项目图片",
+    galleryHeading: "在建仓库及工厂",
+    galleryCta: "🚨 有意租购仓库，请点击!!",
+    resortBadge: "度假村图片",
+    resortHeading: "私人度假村 · 宁静私密",
+    bookBtn: "🏨 预订住宿 — 点击!!",
+    contactBadge: "联系我们",
+    contactHeading: "联系 M-Factory",
+    contactSub: "有意租赁或购买场地？请立即联系我们",
+    qrLabel: "扫描二维码通过LINE联系",
+    addressName: "M度假村",
+    addressLine1: "222 Soi Klong Zone 6, Lat Lum Kaeo Sub-district",
+    addressLine2: "Lat Lum Kaeo District, Pathum Thani 12140",
+    mapsBtn: "查看谷歌地图",
+    footerText: "© 2026 M-Factory · 仓库 · 工厂 · 私人度假村",
+    stats: [
+      { num: "500+", label: "信任客户" },
+      { num: "10+", label: "年经验" },
+      { num: "24/7", label: "安保服务" },
+      { num: "3", label: "服务类型" },
+    ],
+    services: [
+      {
+        icon: "🏭",
+        title: "仓库出租",
+        desc: "各种尺寸的仓库，配备24小时安保系统，适合存放各类货物和材料。",
+      },
+      {
+        icon: "🏗️",
+        title: "工厂出售/出租",
+        desc: "配备完整电力系统的即用工厂，支持工业业务扩展，可租可售。",
+      },
+      {
+        icon: "🏖️",
+        title: "私人度假村",
+        desc: "提供私人度假村住宿，适合休闲度假和企业活动，环境安静私密。",
+      },
+    ],
+    reviewsBadge: "客户评价",
+    reviewsHeading: "来自真实客户的声音",
+    reviewsSub: "500+满意客户 · 平均评分 4.9 / 5.0",
+    reviewsTotal: "总评价",
+    reviewsVerified: "✓ 已验证",
+    reviews: [
+      { name: "Somchai P. 先生", role: "仓库租赁", text: "仓库干净宽敞，工作人员细心，24小时安保，非常放心。", rating: 5, avatar: "👨‍💼", date: "3月 25" },
+      { name: "泰国物流公司", role: "仓库租赁", text: "使用2年了，空间符合需求，停车方便，位置很好。", rating: 5, avatar: "🏢", date: "2月 25" },
+      { name: "Wilaiporn S. 女士", role: "工厂租赁", text: "工厂电力系统完备，即可使用，性价比极高。", rating: 5, avatar: "👩‍💼", date: "4月 25" },
+      { name: "Thanathorn W. 先生", role: "度假村住宿", text: "环境安静优美，非常适合家庭度假，印象深刻！", rating: 5, avatar: "👨", date: "1月 25" },
+      { name: "Amporn S. 女士", role: "仓库租赁", text: "价格合理，紧邻主干道，运输方便，适合中小企业。", rating: 5, avatar: "👩", date: "3月 25" },
+      { name: "东北进口公司", role: "工厂租赁", text: "标准工厂，便于业务扩展，团队给予了很好的建议。", rating: 5, avatar: "🏭", date: "2月 25" },
+      { name: "Pichai R. 先生", role: "企业活动", text: "在这里举办了公司研讨会，场地漂亮，服务一流，所有人都很满意。", rating: 5, avatar: "👨‍💻", date: "4月 25" },
+      { name: "Nantida P. 女士", role: "仓库租赁", text: "全天候闭路电视，24小时驻守人员，货物非常安全。", rating: 5, avatar: "👩‍💼", date: "1月 25" },
+      { name: "Prasert T. 先生", role: "工厂租赁", text: "连续使用3年，从未失望，价格好，团队很专业。", rating: 5, avatar: "👨‍🔧", date: "3月 25" },
+      { name: "Supaporn W. 女士", role: "度假村住宿", text: "设施齐全，环境优美，带孩子来玩，大家都很喜欢，还会再来！", rating: 5, avatar: "👩", date: "2月 25" },
+      { name: "高级仓储公司", role: "仓库租赁", text: "地处高速公路附近，大型卡车进出方便，非常适合物流。", rating: 5, avatar: "🏢", date: "4月 25" },
+      { name: "Mana C. 先生", role: "仓库租赁", text: "安保系统完善，员工礼貌，响应迅速，物超所值。", rating: 5, avatar: "👨", date: "1月 25" },
+      { name: "Kanokwan S. 女士", role: "度假村住宿", text: "风景美丽，宁静祥和，非常适合节假日休息，强烈推荐！", rating: 5, avatar: "👩‍🎨", date: "3月 25" },
+      { name: "Rattanapol C. 先生", role: "工厂租赁", text: "配备三相电和完整供水系统，扩展业务很方便。", rating: 5, avatar: "👨‍🔬", date: "4月 25" },
+    ],
+  },
   en: {
     navServices: "Services",
     navGallery: "Gallery",
@@ -691,35 +765,41 @@ export default function PageClient() {
             >
               {t.navContact}
             </a>
-            <button
-              onClick={() => setLang(lang === "th" ? "en" : "th")}
-              style={{
-                padding: "0.5rem 1rem",
-                borderRadius: 999,
-                border: "2px solid " + GOLD,
-                background: "transparent",
-                color: GOLD, fontSize: "0.9rem", fontWeight: 700,
-                cursor: "pointer", letterSpacing: "0.05em",
-              }}
-            >
-              {lang === "th" ? "EN" : "TH"}
-            </button>
+            <div style={{ display: "flex", gap: 4 }}>
+              {[["th", "TH"], ["en", "EN"], ["zh", "中文"]].map(([l, label]) => (
+                <button key={l} onClick={() => setLang(l)}
+                  style={{
+                    padding: "0.45rem 0.75rem",
+                    borderRadius: 999,
+                    border: "2px solid " + GOLD,
+                    background: lang === l ? GOLD : "transparent",
+                    color: lang === l ? NAVY : GOLD,
+                    fontSize: "0.82rem", fontWeight: 700,
+                    cursor: "pointer", letterSpacing: "0.03em",
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                >{label}</button>
+              ))}
+            </div>
           </div>
         ) : (
           <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-            <button
-              onClick={() => setLang(lang === "th" ? "en" : "th")}
-              style={{
-                padding: "0.35rem 0.8rem",
-                borderRadius: 999,
-                border: "2px solid " + GOLD,
-                background: "transparent",
-                color: GOLD, fontSize: "0.8rem", fontWeight: 700,
-                cursor: "pointer",
-              }}
-            >
-              {lang === "th" ? "EN" : "TH"}
-            </button>
+            <div style={{ display: "flex", gap: 3 }}>
+              {[["th", "TH"], ["en", "EN"], ["zh", "中"]].map(([l, label]) => (
+                <button key={l} onClick={() => setLang(l)}
+                  style={{
+                    padding: "0.3rem 0.55rem",
+                    borderRadius: 999,
+                    border: "2px solid " + GOLD,
+                    background: lang === l ? GOLD : "transparent",
+                    color: lang === l ? NAVY : GOLD,
+                    fontSize: "0.78rem", fontWeight: 700,
+                    cursor: "pointer",
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                >{label}</button>
+              ))}
+            </div>
             <button
               onClick={() => setMenuOpen(o => !o)}
               style={{
