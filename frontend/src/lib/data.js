@@ -61,7 +61,7 @@ export const fallbackClients = [
     contact_phone: "089-4871144",
     contact_fax: "034-878369, 034-848022",
     thumbnail: "/m-group-building.jpg",
-    system_url: "https://geserverhub.com/m-group",
+    system_url: "https://geserverhub.ngrok.app/m-group",
   },
   {
     id: 3,
