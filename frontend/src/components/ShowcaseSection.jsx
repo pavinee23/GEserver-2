@@ -23,12 +23,9 @@ export default function ShowcaseSection({
                   data-reveal
                   data-delay={Math.min(index + 1, 6)}
                   className="showcase-card">
-                  <div className="showcase-visual">
-                    <div className="showcase-glow" />
-                    <div className="showcase-visual-content">
-                      <span className={`status-pill ${statusClassName(client.status)}`}>
-                        {ui.statusLabels[client.status] || client.status}
-                      </span>
+                  <div className="showcase-visual" style={client.thumbnail ? { backgroundImage: `url(${client.thumbnail})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}>
+                    {!client.thumbnail && <div className="showcase-glow" />}
+                    <div className="showcase-visual-content" style={client.thumbnail ? { background: "linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.45) 100%)", position:"absolute", inset:0, padding:"1.3rem" } : {}}>
                       <span className="client-slug">{client.slug}</span>
                     </div>
                   </div>
@@ -38,6 +35,7 @@ export default function ShowcaseSection({
                     <div className="showcase-meta">
                       <span>{client.contact_email}</span>
                       <span>{client.contact_phone}</span>
+                      {client.contact_fax && <span>แฟกซ์: {client.contact_fax}</span>}
                     </div>
                     <div className="showcase-actions">
                       <a

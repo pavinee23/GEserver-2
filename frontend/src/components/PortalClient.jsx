@@ -60,6 +60,9 @@ export default function PortalClient({ client, products, session }) {
           <div className="d-flex align-items-center gap-3 flex-wrap">
             <div>
               <h1 className="h3 fw-bold mb-1">{client.name}</h1>
+              {client.company && (
+                <p className="text-muted small mb-1" style={{ fontStyle: "italic" }}>{client.company}</p>
+              )}
               <p className="text-muted mb-2">{client.description}</p>
               <span className={`badge bg-${STATUS_CLASS[client.status] ?? "secondary"} me-2`}>
                 {STATUS_LABEL[client.status] ?? client.status}
@@ -72,6 +75,11 @@ export default function PortalClient({ client, products, session }) {
               {client.contact_phone && (
                 <span className="text-muted small">
                   📞 {client.contact_phone}
+                </span>
+              )}
+              {client.contact_fax && (
+                <span className="text-muted small ms-3">
+                  📠 {client.contact_fax}
                 </span>
               )}
             </div>

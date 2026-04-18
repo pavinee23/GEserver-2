@@ -1,0 +1,18 @@
+[Unit]
+Description=GOEUN SERVER HUB — Python Backend (gunicorn)
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+User=pavinee
+WorkingDirectory=/home/pavinee/GEserver
+EnvironmentFile=/home/pavinee/GEserver/.env
+ExecStart=/bin/bash /home/pavinee/GEserver/backend/start.sh
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
