@@ -30,12 +30,12 @@ export default function ShowcaseSection({
                     </div>
                   </div>
                   <div className="showcase-body">
-                    <h3>{client.name}</h3>
-                    <p>{client.description}</p>
+                    <h3>{ui.clientDescriptions?.[client.slug]?.name || client.name}</h3>
+                    <p>{ui.clientDescriptions?.[client.slug]?.description || client.description}</p>
                     <div className="showcase-meta">
                       <span>{client.contact_email}</span>
                       <span>{client.contact_phone}</span>
-                      {client.contact_fax && <span>แฟกซ์: {client.contact_fax}</span>}
+                      {client.contact_fax && <span>{ui.faxLabel || "แฟกซ์:"} {client.contact_fax}</span>}
                     </div>
                     <div className="showcase-actions">
                       <a

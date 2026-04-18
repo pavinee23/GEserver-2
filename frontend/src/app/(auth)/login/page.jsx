@@ -83,12 +83,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="text-center mt-3 mb-0 small">
-          ยังไม่มีบัญชี?{" "}
-          <Link href="/register" className="text-primary">
-            สมัครสมาชิก
-          </Link>
-        </p>
+
       </div>
     </main>
   );

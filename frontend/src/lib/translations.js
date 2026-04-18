@@ -29,9 +29,8 @@ export const translations = {
     syncing: "กำลังซิงก์",
     liveSync: "เชื่อมต่อสด",
     servicesKicker: "บริการ",
-    servicesTitle: "บริการในโทน Agency ที่ชัดขึ้นและดูพรีเมียมกว่าเดิม",
-    servicesSubtitle:
-      "โครง section นี้อิงจังหวะของ StartBootstrap Agency แต่ถูกปรับให้เหมาะกับบริษัทที่พัฒนาระบบจริง มีฐานข้อมูลจริง และต้องพาลูกค้าเข้าสู่พอร์ทัลหลายระบบจากหน้าเดียว",
+    servicesTitle: "บริการของเรา",
+    servicesSubtitle: "",
     serviceMap: {
       "Custom Workflow": {
         highlight: "เวิร์กโฟลว์เฉพาะทาง",
@@ -66,9 +65,8 @@ export const translations = {
     emptyTitle: "ไม่พบลูกค้าที่ตรงกับคำค้นหา",
     emptyText: "ลองล้างคำค้นหาหรือสลับตัวกรองสถานะ แล้วรายการจากฐานข้อมูลจะถูกแสดงใหม่ทันที",
     journeyKicker: "เส้นทางงาน",
-    journeyTitle: "Timeline แบบ Agency ที่เล่าเรื่องการทำระบบของคุณแทน",
-    journeySubtitle:
-      "ผมเปลี่ยน section About เดิมของธีมให้กลายเป็นเส้นทางการพัฒนาระบบ ตั้งแต่วิเคราะห์งาน วางฐานข้อมูล เปิดใช้จริง ไปจนถึงดูแลหลังบ้านในระยะยาว",
+    journeyTitle: "ระบบการทำงานและความใส่ใจ ความละเอียดรอบคอบของเรา",
+    journeySubtitle: "",
     journeySteps: [
       {
         phase: "01",
@@ -100,13 +98,13 @@ export const translations = {
       },
     ],
     contactKicker: "ติดต่อ",
-    contactTitle: "พร้อมใช้เป็นหน้าแรกของเซิร์ฟเวอร์ หรือพัฒนาเป็น client hub เต็มรูปแบบต่อได้",
-    contactText:
-      "ตอนนี้หน้า frontend ใหม่ได้ visual direction แบบ Agency ที่ดูโตขึ้นแล้ว และยังเชื่อมข้อมูล profile, services และ clients จาก backend เดิมได้ต่อเนื่อง",
+    contactTitle: "อยากให้เราช่วยแก้ปัญหาเรื่องระบบ เรื่องการวางรากฐานขององค์กร หรือปัญหาอื่นๆ โปรดติดต่อเรา",
+    contactText: "",
     emailLabel: "อีเมล",
     phoneLabel: "โทรศัพท์",
     addressLabel: "ที่อยู่",
     sendEmail: "ส่งอีเมล",
+    faxLabel: "แฟกซ์:",
     openDirectory: "เปิด directory เดิม",
     footerSubtitle: "ลิขสิทธิ์ © 2026 GOEUN SERVER HUB",
     footerFrontend: "สงวนลิขสิทธิ์",
@@ -116,6 +114,20 @@ export const translations = {
       online: "พร้อมใช้งาน",
       maintenance: "กำลังบำรุงรักษา",
       "coming-soon": "เตรียมเปิดใช้งาน",
+    },
+    clientDescriptions: {
+      "m-factory": {
+        name: "M-Factory",
+        description: "ขาย-ให้เช่าโกดัง โรงงาน พร้อมบริการที่พัก รีสอร์ทส่วนตัว",
+      },
+      "m-group": {
+        name: "M-Group",
+        description: "\"ดูแล ใส่ใจ เกษตรไทย ครบวงจร\" บริการสินค้าด้านการเกษตร ในราคาปลีก-ส่ง ด้วยสินค้าหลากหลายมากกว่า 10,000 รายการ",
+      },
+      "green-retail-group": {
+        name: "Green Retail Group",
+        description: "ระบบขายหน้าร้านและสรุปยอดหลายสาขา พร้อมหน้ารายงานสำหรับผู้บริหาร",
+      },
     },
   },
   en: {
@@ -220,13 +232,13 @@ export const translations = {
       },
     ],
     contactKicker: "Contact",
-    contactTitle: "Ready to serve as your main server homepage or grow into a full client hub",
-    contactText:
-      "The new frontend now carries an Agency-inspired visual direction while still connecting to the same profile, services, and client data from the existing backend.",
+    contactTitle: "Need help with system problems, building your organizational foundation, or anything else? Contact us.",
+    contactText: "",
     emailLabel: "Email",
     phoneLabel: "Phone",
     addressLabel: "Address",
     sendEmail: "Send Email",
+    faxLabel: "Fax:",
     openDirectory: "Open Legacy Directory",
     footerSubtitle: "Copyright © 2026 GOEUN SERVER HUB",
     footerFrontend: "All rights reserved",
@@ -237,14 +249,30 @@ export const translations = {
       maintenance: "Maintenance",
       "coming-soon": "Coming Soon",
     },
+    clientDescriptions: {
+      "m-factory": {
+        name: "M-Factory",
+        description: "Warehouse & factory for sale/rent, with private resort accommodation services",
+      },
+      "m-group": {
+        name: "M-Group",
+        description: "\"Caring for Thai agriculture, end-to-end\" — retail & wholesale agricultural products with over 10,000 items",
+      },
+      "green-retail-group": {
+        name: "Green Retail Group",
+        description: "Multi-branch POS and sales summary system with executive reporting dashboard",
+      },
+    },
   },
   zh: {
     brandKicker: "灵感来自 Agency 的客户门户",
     brandSubtitle: "服务展示与多客户系统入口",
+    navHome: "首页",
     navServices: "服务",
     navPortals: "客户入口",
     navJourney: "流程",
     navContact: "联系",
+    navLogin: "登录",
     heroKicker: "GOEUN DIGITAL INFRASTRUCTURE",
     heroWelcome: "欢迎来到您的客户系统入口中心",
     heroTitle: "您的客户系统与服务展示中心",
@@ -265,9 +293,8 @@ export const translations = {
     syncing: "同步中",
     liveSync: "实时同步",
     servicesKicker: "服务",
-    servicesTitle: "更精致、更专业的 Agency 风格服务展示",
-    servicesSubtitle:
-      "这一部分保留 Agency 模板的节奏感，但重新设计为适合真实系统开发公司、真实数据库和多个客户入口的结构。",
+    servicesTitle: "我们的服务",
+    servicesSubtitle: "",
     serviceMap: {
       "Custom Workflow": {
         highlight: "定制流程",
@@ -286,9 +313,8 @@ export const translations = {
       },
     },
     showcaseKicker: "客户入口",
-    showcaseTitle: "保留 Agency 作品集气质，但改成真实客户门户",
-    showcaseSubtitle:
-      "这里把原本的 Agency 作品集区块替换为来自数据库的客户系统，让视觉风格保留，同时具备真实可用性。",
+    showcaseTitle: "我们的系统服务成果与发展",
+    showcaseSubtitle: "",
     searchLabel: "搜索客户",
     searchPlaceholder: "输入公司名称、slug 或系统说明",
     filterAll: "全部",
@@ -300,8 +326,8 @@ export const translations = {
     emptyTitle: "没有找到符合条件的客户",
     emptyText: "请尝试清空搜索条件或切换状态筛选，重新加载数据库结果。",
     journeyKicker: "流程",
-    journeyTitle: "用 Agency 风格时间线讲述您的交付流程",
-    journeySubtitle: "原本 Agency 的 About 区块被改造成系统交付流程，从需求分析、数据设计到上线与持续支持。",
+    journeyTitle: "我们的工作方式与专注细节",
+    journeySubtitle: "",
     journeySteps: [
       {
         phase: "01",
@@ -329,12 +355,13 @@ export const translations = {
       },
     ],
     contactKicker: "联系",
-    contactTitle: "可直接作为服务器首页，也可继续扩展成完整客户门户",
-    contactText: "这个新前端已经具备 Agency 风格的品牌感，同时继续连接原有 backend 中的 profile、services 与 clients 数据。",
+    contactTitle: "如需系统开发、组织建设或其他问题，欢迎联系我们",
+    contactText: "",
     emailLabel: "邮箱",
     phoneLabel: "电话",
     addressLabel: "地址",
     sendEmail: "发送邮件",
+    faxLabel: "传真:",
     openDirectory: "打开原目录页",
     footerSubtitle: "版权所有 © 2026 GOEUN SERVER HUB",
     footerFrontend: "保留所有权利",
@@ -345,14 +372,30 @@ export const translations = {
       maintenance: "维护中",
       "coming-soon": "即将上线",
     },
+    clientDescriptions: {
+      "m-factory": {
+        name: "M-Factory",
+        description: "仓库与工厂出租或出售，附带私人度假村住宿服务",
+      },
+      "m-group": {
+        name: "M-Group",
+        description: "\"专注关怀泰国农业，一站式服务\" — 农业商品零售与批发，超过 10,000 种产品",
+      },
+      "green-retail-group": {
+        name: "Green Retail Group",
+        description: "多门店销售与汇总系统，提供管理层报表页面",
+      },
+    },
   },
   ko: {
     brandKicker: "Agency 스타일 고객 허브",
     brandSubtitle: "서비스 소개와 다중 고객 시스템 진입점",
+    navHome: "홈",
     navServices: "서비스",
     navPortals: "고객 포털",
     navJourney: "진행 과정",
     navContact: "문의",
+    navLogin: "로그인",
     heroKicker: "GOEUN DIGITAL INFRASTRUCTURE",
     heroWelcome: "고객 시스템 허브에 오신 것을 환영합니다",
     heroTitle: "고객 시스템과 서비스 홍보를 위한 통합 허브",
@@ -373,9 +416,8 @@ export const translations = {
     syncing: "동기화 중",
     liveSync: "실시간 연결",
     servicesKicker: "서비스",
-    servicesTitle: "더 세련되고 전문적인 Agency 스타일 서비스 섹션",
-    servicesSubtitle:
-      "이 섹션은 Agency 템플릿의 리듬을 유지하면서도 실제 시스템 개발 회사와 실제 데이터베이스, 여러 고객 포털에 맞게 다시 설계되었습니다.",
+    servicesTitle: "저희 서비스",
+    servicesSubtitle: "",
     serviceMap: {
       "Custom Workflow": {
         highlight: "맞춤 워크플로",
@@ -394,9 +436,8 @@ export const translations = {
       },
     },
     showcaseKicker: "고객 포털",
-    showcaseTitle: "Agency 포트폴리오 감성을 유지하면서 실제 고객 포털로 재구성",
-    showcaseSubtitle:
-      "원래 Agency 테마의 포트폴리오 영역을 데이터베이스 기반 고객 시스템으로 바꿔, 분위기는 유지하면서 실제로 사용할 수 있는 구조로 만들었습니다.",
+    showcaseTitle: "저희 시스템 서비스 성과와 발전",
+    showcaseSubtitle: "",
     searchLabel: "고객 검색",
     searchPlaceholder: "회사명, slug 또는 시스템 설명 검색",
     filterAll: "전체",
@@ -408,9 +449,8 @@ export const translations = {
     emptyTitle: "검색 조건에 맞는 고객이 없습니다",
     emptyText: "검색어를 지우거나 상태 필터를 바꾸면 데이터베이스 결과를 다시 불러올 수 있습니다.",
     journeyKicker: "진행 과정",
-    journeyTitle: "Agency 스타일 타임라인으로 전달 흐름을 보여줍니다",
-    journeySubtitle:
-      "Agency 테마의 About 섹션을 분석, 데이터 설계, 런칭, 지속 지원까지 보여주는 전달 여정으로 바꿨습니다.",
+    journeyTitle: "저희의 업무 방식과 세심한 배려",
+    journeySubtitle: "",
     journeySteps: [
       {
         phase: "01",
@@ -438,13 +478,13 @@ export const translations = {
       },
     ],
     contactKicker: "문의",
-    contactTitle: "서버의 메인 첫 화면으로도, 완전한 고객 허브로도 확장 가능합니다",
-    contactText:
-      "이 새 프런트엔드는 Agency 스타일의 브랜드 감각을 가지면서도 기존 backend의 profile, services, clients 데이터와 계속 연결됩니다.",
+    contactTitle: "시스템 문제, 조직 기반 구축 또는 기타 문제에 대해 도움이 필요하시면 연락주세요",
+    contactText: "",
     emailLabel: "이메일",
     phoneLabel: "전화",
     addressLabel: "주소",
     sendEmail: "이메일 보내기",
+    faxLabel: "팩스:",
     openDirectory: "기존 디렉터리 열기",
     footerSubtitle: "저작권 © 2026 GOEUN SERVER HUB",
     footerFrontend: "판권 소유",
@@ -454,6 +494,20 @@ export const translations = {
       online: "운영 중",
       maintenance: "점검 중",
       "coming-soon": "오픈 예정",
+    },
+    clientDescriptions: {
+      "m-factory": {
+        name: "M-Factory",
+        description: "창고 및 공장 임대·매매, 프라이빗 리조트 숙박 서비스 제공",
+      },
+      "m-group": {
+        name: "M-Group",
+        description: "\"태국 농업을 세심하게 돌보는 일괄 서비스\" — 농업 상품 소매·도매, 10,000개 이상의 다양한 제품",
+      },
+      "green-retail-group": {
+        name: "Green Retail Group",
+        description: "다지점 POS 판매 및 집계 시스템, 경영진용 보고서 대시보드 제공",
+      },
     },
   },
 };

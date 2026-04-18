@@ -40,6 +40,9 @@ body {
   color: var(--agency-ink);
   font-family: var(--agency-font-body);
   background: var(--agency-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -788,19 +791,23 @@ img {
 
 .agency-brand-copy strong,
 .agency-footer-brand strong {
+  display: block;
   font-size: 1rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #1a2340;
   font-weight: 700;
+  font-family: var(--agency-font-body);
+  margin-bottom: 0.25rem;
 }
 
 .agency-brand-copy span:last-child,
 .agency-footer-brand span {
-  color: #1a2340;
+  color: #4b5a7a;
   font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-family: var(--agency-font-body);
 }
 
 .agency-brand-kicker,
@@ -958,9 +965,11 @@ img {
 }
 
 .section-kicker-light {
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: 400;
+  letter-spacing: 0.1em;
 }
 
 .masthead-welcome {
@@ -1205,14 +1214,6 @@ img {
 .agency-mini-grid span {
   color: #3a4a66;
   font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.contact-strip span {
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 0.76rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -1759,14 +1760,19 @@ img {
 
 .contact-banner h2 {
   margin: 1rem 0 0.9rem;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1;
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+  line-height: 1.55;
   color: #ffffff;
+  font-family: var(--agency-font-body);
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .contact-banner p {
   color: rgba(255, 255, 255, 0.95);
-  font-size: 1.05rem;
+  font-size: 1rem;
+  font-family: var(--agency-font-body);
+  line-height: 1.65;
 }
 
 .contact-banner-side {
@@ -1776,15 +1782,29 @@ img {
 
 .contact-strip {
   display: grid;
-  gap: 0.2rem;
-  padding: 1rem;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--agency-font-body);
+}
+
+.contact-strip span {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .contact-strip strong {
   color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--agency-font-body);
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 
 .contact-actions {
@@ -1825,9 +1845,11 @@ img {
   color: #1a2340;
   border: 1px solid rgba(37, 99, 235, 0.1);
   background: #f4f6fb;
-  font-size: 0.88rem;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-family: var(--agency-font-body);
+  font-weight: 500;
 }
 
 @media (max-width: 1199.98px) {

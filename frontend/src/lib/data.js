@@ -5,7 +5,7 @@ export const languageStorageKey = "goeun-agency-language";
 
 export const fallbackProfile = {
   brand_name: "GOEUN SERVER HUB",
-  headline: "ศูนย์กลางระบบลูกค้าและหน้าโปรโมตบริการของคุณ",
+  headline: "ศูนย์กลางระบบลูกค้าและหน้าโปรโมทบริการของคุณ",
   subheadline:
     "รวมหน้าแนะนำบริการ, ช่องทางติดต่อ, และทางเข้าระบบสำหรับลูกค้าหลายรายไว้ในเว็บเดียว",
   phone: "081-234-5678",
@@ -83,9 +83,9 @@ export const filterOptions = [
 ];
 
 export const languageOptions = [
-  { key: "th", label: "ไทย" },
+  { key: "th", label: "TH" },
   { key: "en", label: "EN" },
-  { key: "zh", label: "中文" },
+  { key: "zh", label: "中" },
   { key: "ko", label: "KO" },
 ];
 

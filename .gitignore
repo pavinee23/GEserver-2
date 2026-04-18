@@ -1,5 +1,26 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
 .pytest_cache/
-.env
+.python-version
+venv/
+.venv/
+
+# Node
 node_modules/
+
+# Environment
+.env
+.env.local
+
+# Databases
+data/*.db
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Misc
+.DS_Store
+*.log
