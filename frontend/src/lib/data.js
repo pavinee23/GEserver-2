@@ -61,7 +61,7 @@ export const fallbackClients = [
     contact_phone: "089-4871144",
     contact_fax: "034-878369, 034-848022",
     thumbnail: "/m-group-building.jpg",
-    system_url: "/m-group",
+    system_url: "https://www.geserverhub.com/m-group",
   },
   {
     id: 3,
