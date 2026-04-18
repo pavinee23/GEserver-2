@@ -8,7 +8,7 @@ const homeTranslations = {
       "home.language_label": "ภาษา",
       "home.hero_eyebrow": "SERVER LANDING PAGE",
       "home.hero_note": "ดีไซน์, ทางเข้าระบบ และภาพลักษณ์ธุรกิจ จบในหน้าเดียว",
-      "home.hero_title": "ศูนย์กลางระบบลูกค้าและหน้าโปรโมตบริการของคุณ",
+      "home.hero_title": "ศูนย์กลางระบบลูกค้าและหน้าโปรโมทบริการของคุณ",
       "home.hero_subheadline": "รวมหน้าแนะนำบริการ, ช่องทางติดต่อ, และทางเข้าระบบสำหรับลูกค้าหลายรายไว้ในเว็บเดียว",
       "home.cta_login": "เข้าสู่ระบบลูกค้า",
       "home.cta_services": "ดูบริการ",

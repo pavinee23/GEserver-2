@@ -10,7 +10,7 @@ export const translations = {
     navLogin: "เข้าสู่ระบบ",
     heroKicker: "GOEUN DIGITAL INFRASTRUCTURE",
     heroWelcome: "ยินดีต้อนรับสู่ศูนย์กลางระบบลูกค้าของคุณ",
-    heroTitle: "ศูนย์กลางระบบลูกค้าและหน้าโปรโมตบริการของคุณ",
+    heroTitle: "ศูนย์กลางระบบลูกค้าและหน้าโปรโมทบริการของคุณ",
     heroSubtitle:
       "รวมหน้าแนะนำบริการ, ช่องทางติดต่อ, และทางเข้าระบบสำหรับลูกค้าหลายรายไว้ในเว็บเดียว",
     heroPrimaryButton: "เปิดพอร์ทัลลูกค้า",
@@ -53,9 +53,8 @@ export const translations = {
       },
     },
     showcaseKicker: "พอร์ทัลลูกค้า",
-    showcaseTitle: "ใช้ portfolio feeling แบบ Agency แต่แสดงพอร์ทัลลูกค้าจริง",
-    showcaseSubtitle:
-      "ส่วนนี้แทนพอร์ตโฟลิโอเดิมของ Agency theme ด้วยรายชื่อระบบลูกค้าจากฐานข้อมูล คุณจึงได้ทั้งความรู้สึกของธีมต้นฉบับและความสามารถใช้งานจริงในระบบเดียว",
+    showcaseTitle: "ผลงานและการพัฒนาการให้บริการด้านระบบของเรา",
+    showcaseSubtitle: "",
     searchLabel: "ค้นหาลูกค้า",
     searchPlaceholder: "พิมพ์ชื่อบริษัท, slug หรือคำอธิบายระบบ",
     filterAll: "ทั้งหมด",

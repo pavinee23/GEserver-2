@@ -11,7 +11,7 @@ class PortalApplicationTests(unittest.TestCase):
     def setUp(self) -> None:
         self.profile = {
             "brand_name": "GOEUN SERVER HUB",
-            "headline": "ศูนย์กลางระบบลูกค้าและหน้าโปรโมตบริการของคุณ",
+            "headline": "ศูนย์กลางระบบลูกค้าและหน้าโปรโมทบริการของคุณ",
             "subheadline": "รวมหน้าแนะนำบริการ, ช่องทางติดต่อ, และทางเข้าระบบสำหรับลูกค้าหลายรายไว้ในเว็บเดียว",
             "phone": "081-234-5678",
             "email": "goeunserverhub@gmail.com",

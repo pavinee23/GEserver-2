@@ -162,7 +162,7 @@ class PortalApplication:
         except Exception:
             return {
                 "brand_name": "GOEUN SERVER HUB",
-                "headline": "ศูนย์กลางระบบลูกค้าและหน้าโปรโมตบริการของคุณ",
+                "headline": "ศูนย์กลางระบบลูกค้าและหน้าโปรโมทบริการของคุณ",
                 "subheadline": "ระบบพร้อมเชื่อมต่อ MySQL",
                 "phone": "",
                 "email": "",
