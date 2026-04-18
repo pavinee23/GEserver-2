@@ -1,5 +1,5 @@
 [Unit]
-Description=ngrok Tunnel — geserverhub.com → port 3005
+Description=ngrok Tunnel — https://geserverhub.ngrok.app → port 3005
 After=network.target geserver-frontend.service
 Wants=geserver-frontend.service
 
