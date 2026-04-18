@@ -44,9 +44,9 @@ export const fallbackClients = [
     slug: "m-factory",
     description: "ขาย-ให้เช่าโกดัง โรงงาน พร้อมบริการที่พัก รีสอร์ทส่วนตัว",
     status: "online",
-    contact_email: "ops@rung-ruang.example.com",
-    contact_phone: "02-111-2233",
-    system_url: "/m-factory",
+    contact_email: "m.factoryandresort@gmail.com",
+    contact_phone: "+66 095-241-1833",
+    system_url: "https://m-factoryandresort.com/",
   },
   {
     id: 2,
